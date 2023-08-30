@@ -3,6 +3,15 @@ import videoMobile from '../assets/video/header-video-background-mobile.mp4';
 import highlight from '../assets/img/highlight.svg'
 
 export const Header = () => {
+
+  const videoUrl = () => {
+    if (window.innerWidth >= 720) {
+      return videoDesktop;
+    } else {
+      return videoMobile;
+    }
+  }
+
   return (
     <header>
 
@@ -10,7 +19,7 @@ export const Header = () => {
 
         <div className="bg-video-container__bg-video-wrapper">
 
-          <video className="bg-video-container__bg-video-wrapper__bg-video" src={videoDesktop} autoPlay muted playsInline loop></video>
+          <video className="bg-video-container__bg-video-wrapper__bg-video" src={ videoUrl() } autoPlay muted playsInline loop></video>
 
         </div>
 
