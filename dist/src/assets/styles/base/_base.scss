@@ -1,0 +1,263 @@
+@import url('./_reset.css');
+
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Koulen&display=swap');
+
+
+/* variables */
+
+$colors: (
+    "black": #1E1E1E,
+    "white": #FAFAFA,
+);
+
+$fonts: (
+    "titles": Koulen,
+    "normal": Barlow,
+);
+
+$black: #1E1E1E;
+$white: #FAFAFA;
+$gray: #6A6A6A;
+
+/* Basics */
+
+body {
+    background-color: map-get($colors, "black" );
+}
+
+
+h1, h2, h3, h4 {
+    position: relative;
+    font-family: map-get($fonts, "titles" );
+    color: map-get($colors, "white" );
+    line-height: 1.1em;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+p {
+    font-family: map-get($fonts, "normal" );
+    color: map-get($colors, "white" );
+    line-height: 1.1em;
+}
+
+form {
+    font-family: map-get($fonts, "normal" );
+}
+
+section {
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+.bg-black {
+    background-color: map-get($colors, "black" );
+}
+
+.btn {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+    padding: 4px 18px;
+    font-size: 22px;
+
+    &--01 {
+        border-color: map-get($colors, "white" );
+        color: map-get($colors, "white" );
+        background-color: map-get($colors, "black" );
+
+        &:hover {
+            background-color: map-get($colors, "white" );
+            color: map-get($colors, "black" );
+        }
+    }
+
+    &--02 {
+        border-color: map-get($colors, "black" );
+        color: map-get($colors, "black" );
+
+        &:hover {
+            background-color: map-get($colors, "black" );
+            color: map-get($colors, "white" );
+        }
+    }
+
+    &--03 {
+        border: none;
+        color: map-get($colors, "black" );
+
+        &:hover {
+            border-bottom: 1px solid map-get($colors, "white" );
+        }
+    }
+}
+
+
+button:focus {
+        outline:none !important;
+        outline-width: 0 !important;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 1640px) {
+    
+    h1 {
+        font-size: 150px;
+    }
+    
+    h2 {
+        font-size: 96px;
+    }
+    
+    h3 {
+        font-size: 48px;
+    }
+    
+    h4 {
+        font-size: 32px;
+    }
+    
+    .btn {
+        border-radius: 7px;
+        padding: 4px 18px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1639px) {
+    
+    h1 {
+        font-size: 96px;
+    }
+    
+    h2 {
+        font-size: 64px;
+    }
+    
+    h3 {
+        font-size: 36px;
+    }
+    
+    h4 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    
+    .btn {
+        border-radius: 7px;
+        padding: 4px 18px;
+        font-size: 18px;
+    }
+
+    section {
+        padding-top: 8em;
+        padding-bottom: 8em;
+    }
+
+}
+
+@media screen and (min-width: 376px) and (max-width: 719px) {
+    
+    h1 {
+        font-size: 54px;
+    }
+    
+    h2 {
+        font-size: 55px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+    
+    h4 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    
+    .btn {
+        border-radius: 7px;
+        padding: 4px 18px;
+        font-size: 16px;
+    }
+
+    section {
+        padding-top: 6em;
+        padding-bottom: 6em;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    
+    h1 {
+        font-size: 44px;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    
+    .btn {
+        border-radius: 7px;
+        padding: 4px 18px;
+        font-size: 14px;
+    }
+
+    section {
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+}
+
+/* Empty breakpoints example
+
+@media screen and (min-width: 1640px) {
+
+}
+
+@media screen and (min-width: 720px) and (max-width: 1639px) {
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 719px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+*/

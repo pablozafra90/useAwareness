@@ -1,0 +1,93 @@
+$black: #1E1E1E;
+$white: #FAFAFA;
+$gray: #6A6A6A;
+
+.trasparence {
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+.viewport-cover {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+
+    input {
+
+        &[type=checkbox] {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+
+            &:checked {
+                background-color: $white;
+            }
+        }
+
+        &[type=text] {
+            display: block;
+            width: 100%;
+            background-color: $black;
+            color: $white;
+            margin-bottom: 20px;
+            border: solid 1px $white;
+            padding: 30px 10px 10px 10px;
+            border-radius: 8px;
+    
+            &::placeholder {
+                color: $white;
+            }
+    
+            &:focus {
+                
+                &::placeholder {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        &[type=submit] {
+            border: none;
+            color: $black;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 22px;
+    
+            &:hover {
+                background-color: $gray;
+                color: $white;
+                border: solid 1px $white;
+            }
+        }
+    }
+
+    label {
+        position: absolute;
+        color: $gray;
+        font-size: 13px;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+
+    p {
+        vertical-align: top;
+
+        .txt {
+            vertical-align: top;
+        }
+
+        .link-simulation {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

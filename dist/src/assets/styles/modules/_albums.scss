@@ -1,0 +1,301 @@
+.albums-sect {
+    overflow: hidden;
+
+    &__Title {
+        grid-column: 2 / span 10;
+        text-align: right;
+    }
+
+    &__slider-container {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+
+        &__btns-container {
+            position: absolute;
+            width: 100%;
+            height: 500px;            
+
+            &__btn {
+                position: absolute;
+                width: 40%;
+                height: 100%;
+                top: 50%;
+                margin: 0px 20px;
+                transform: translateY(-50%);
+                background-image: url(../../img/arrow.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+
+                &--left {
+                    left: 0;
+                    transform: translateY(-50%) scaleX(-1);
+                    background-position: right;
+    
+                    &__arrow {
+                        transform: scaleX(-1);
+                    }
+                }
+    
+                &--right {
+                    right: 0;
+                    background-position: right;
+                }
+
+                &:focus {
+                        outline:none !important;
+                        outline-width: 0 !important;
+                        box-shadow: none;
+                        -moz-box-shadow: none;
+                        -webkit-box-shadow: none;
+                }
+
+                img {
+                    position: absolute;
+                    top: 2em;
+                }
+            }
+        }        
+
+        &__items-grid {
+            position: relative;
+            text-align: center;
+            width: max-content;
+            left: 25vw;
+            transition: all 0.3s ease-out;
+            padding: 0;
+
+            &__item {
+                position: relative;
+                width: 50vw;
+                float: left;
+                list-style: none;
+
+                &__cover {
+                    width: 70%;
+                }
+
+                &__info {
+
+                    &__btn {
+                        margin-bottom: 20px;
+                    }
+
+                    &__platforms {
+
+                        &__icon {
+                            margin-left: 8px;
+                            margin-right: 8px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Responsive  */
+
+@media screen and (min-width: 1640px) {
+    .albums-sect {
+    
+        &__Title {
+        }
+    
+        &__slider-container {
+    
+            &__btns-container {      
+    
+                &__btn {        
+                    background-size: 80px;
+                    background-position: center;
+                }
+            }        
+    
+            &__items-grid {
+    
+                &__item {
+    
+                    &__cover {
+                        width: 70%;
+                    }
+    
+                    &__info {
+    
+                        &__btn {
+        
+                            &__arrow {
+                                width: 30%;
+                                height: 100%;
+                            }
+                        }
+    
+                        &__platforms {
+    
+                            &__icon {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1639px) {
+    .albums-sect {
+    
+        &__Title {
+        }
+    
+        &__slider-container {
+    
+            &__btns-container {  
+                height: 400px;           
+    
+                &__btn {
+                    height: 100%;
+                    background-size: 70px;
+                    background-position: center;
+        
+                    &__arrow {
+                        width: 30%;
+                        height: 100%;
+                    }
+                }
+            }        
+    
+            &__items-grid {
+    
+                &__item {
+    
+                    &__cover {
+                        width: 70%;
+                    }
+    
+                    &__info {
+    
+                        &__btn {
+                        }
+    
+                        &__platforms {
+    
+                            &__icon {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 719px) {
+    .albums-sect {
+    
+        &__Title {
+            grid-column: 1 / span 4;
+            text-align: center;
+        }
+    
+        &__slider-container {
+    
+            &__btns-container {  
+                height: 200px;           
+    
+                &__btn {
+                        height: 100%;
+                        background-size: 20%;
+        
+                    &__arrow {
+                    }
+                }
+            }        
+    
+            &__items-grid {
+    
+                &__item {
+                    width: 100vw;
+    
+                    &__cover {
+                        width: 70%;
+                    }
+    
+                    &__info {
+    
+                        &__btn {
+                        }
+    
+                        &__platforms {
+    
+                            &__icon {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .albums-sect {
+    
+        &__Title {
+            grid-column: 1 / span 4;
+            text-align: center;
+        }
+    
+        &__slider-container {
+    
+            &__btns-container {     
+                height: 100px;        
+    
+                &__btn {
+                    margin: 0px 10px;
+        
+                    &__arrow {
+                        height: 80%;
+                    }
+
+                    &--left {
+                        
+                        img {
+                            left: 0;
+                        }
+                    }
+        
+                    &--right {
+                        right: 0;
+                    }
+                }
+            }        
+    
+            &__items-grid {
+    
+                &__item {
+                    width: 100vw;
+    
+                    &__cover {
+                        width: 70%;
+                    }
+    
+                    &__info {
+    
+                        &__btn {
+                        }
+    
+                        &__platforms {
+    
+                            &__icon {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

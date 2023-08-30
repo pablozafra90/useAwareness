@@ -1,0 +1,71 @@
+
+.business-sect {
+
+    &__Title {
+        text-align: center;
+    }
+}
+
+/* Responsive */
+
+
+@media screen and (min-width: 1640px) {
+
+    .business-sect {
+
+        &__Title {
+            grid-column: 1 / span 12;
+        }
+    
+        form {
+            grid-column: 4 / span 6;
+        }
+    }
+
+}
+
+@media screen and (min-width: 720px) and (max-width: 1639px) {
+
+    .business-sect {
+
+        &__Title {
+            grid-column: 1 / span 12;
+        }
+    
+        form {
+            grid-column: 3 / span 8;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 719px) {
+
+    .business-sect {
+
+        &__Title {
+            grid-column: 1 / span 4;
+        }
+    
+        form {
+            grid-column: 1 / span 4;
+        }
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .business-sect {
+
+        &__Title {
+            grid-column: 1 / span 4;
+        }
+    
+        form {
+            grid-column: 1 / span 4;
+        }
+    }
+
+
+}
