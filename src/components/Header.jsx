@@ -1,6 +1,6 @@
-import videoDesktop from '../assets/video/header-video-background-desktop.mp4'
-import videoMobile from '../assets/video/header-video-background-mobile.mp4'
-import logo from '../assets/img/logo.svg';
+import videoDesktop from '../assets/video/header-video-background-desktop.mp4';
+import videoMobile from '../assets/video/header-video-background-mobile.mp4';
+import highlight from '../assets/img/highlight.svg'
 
 export const Header = () => {
   return (
@@ -18,15 +18,13 @@ export const Header = () => {
 
       <div className="trasparence bg-black"></div>
 
-      <img className="header-logo" src={logo}></img>
-
       <div className="header-container grid-layout">
 
             <div className="header-container__h1-container">
 
                 <div className="header-container__h1-container__h1-content">
 
-                    <h1>YOU WOKE UP, BREAK SOMETHING, BREATHE, JUMP, NOTHING MATTERS...</h1>
+                    <h1>YOU <span className='header-container__h1-container__h1-content__highlighted'><img className='header-container__h1-container__h1-content__highlighted__img' src={highlight}/>WOKE</span> UP, BREAK SOMETHING, BREATHE, JUMP, NOTHING MATTERS...</h1>
 
                 </div>
 

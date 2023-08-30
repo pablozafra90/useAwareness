@@ -1,0 +1,154 @@
+$black: #1E1E1E;
+$white: #FAFAFA;
+$gray: #6A6A6A;
+
+.next-shows-sect {
+
+    &__Title {
+        grid-column: 3 / span 2;
+    }
+
+    &__shows-grid {
+        grid-column: 5 / span 7;
+        padding: 0;
+
+        &__show-item {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            margin-bottom: 1em;
+            border-bottom: 1px solid $white;
+
+            &__show-info {
+                flex: 1;
+            }
+
+            &__btn-container {
+                position: relative;
+                width: max-content;
+
+                &__btn {
+                    position: absolute;
+                    bottom: 1em;
+                    right: 0;
+                    width: max-content;
+                }
+            }
+        }
+    }
+
+}
+
+
+/* Responsive */
+
+
+@media screen and (min-width: 1640px) {
+
+    .next-shows-sect {
+
+        &__Title {
+            grid-column: 3 / span 2;
+        }
+
+        &__shows-grid {
+            grid-column: 5 / span 7;
+
+            &__show-item {
+
+                &__show-info {
+                }
+
+                &__btn-container {
+
+                    &__btn {
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 720px) and (max-width: 1639px) {
+
+    .next-shows-sect {
+
+        &__Title {
+            grid-column: 3 / span 3;
+        }
+
+        &__shows-grid {
+            grid-column: 6 / span 6;
+
+            &__show-item {
+
+                &__show-info {
+                }
+
+                &__btn-container {
+
+                    &__btn {
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 719px) {
+
+    .next-shows-sect {
+
+        &__Title {
+            grid-column: 1 / span 4;
+            text-align: center;
+        }
+
+        &__shows-grid {
+            grid-column: 1 / span 4;
+
+            &__show-item {
+
+                &__show-info {
+                }
+
+                &__btn-container {
+
+                    &__btn {
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .next-shows-sect {
+
+        &__Title {
+            grid-column: 1 / span 4;
+            text-align: center;
+        }
+
+        &__shows-grid {
+            grid-column: 1 / span 4;
+
+            &__show-item {
+
+                &__show-info {
+                }
+
+                &__btn-container {
+
+                    &__btn {
+                    }
+                }
+            }
+        }
+    }
+
+}

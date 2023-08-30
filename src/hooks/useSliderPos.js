@@ -9,8 +9,13 @@ export const useSliderPos = () => {
     const albumsLenth = albums.length;
   
     const leftPropGrid = () => {
-        return vpWd * 0.25  - position * vpWd * 0.5;
+        if ( vpWd >= 720 ) {
+            return vpWd * 0.25  - position * vpWd * 0.5;
+        } else {
+            return - position * vpWd;
+        }
     }
+
     const setSliderPos = ( pos ) => {
         if ( position + pos >= 0 && position + pos < albumsLenth ) {
             setPosition(position + pos);

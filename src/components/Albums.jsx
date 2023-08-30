@@ -23,11 +23,11 @@ export const Albums = () => {
             <div className="albums-sect__slider-container__btns-container">
             
                 <button className="albums-sect__slider-container__btns-container__btn albums-sect__slider-container__btns-container__btn--left btn" onClick={() => { setSliderPos(-1) }}>
-                    <img className="albums-sect__slider-container__btns-container__btn__arrow albums-sect__slider-container__btns-container__btn--left__arrow" src="../src/assets/img/arrow.svg"/>
+                    {/* <img className="albums-sect__slider-container__btns-container__btn__arrow albums-sect__slider-container__btns-container__btn--left__arrow" src="../src/assets/img/arrow.svg"/> */}
                 </button>
                 
                 <button className="albums-sect__slider-container__btns-container__btn albums-sect__slider-container__btns-container__btn--right btn" onClick={() => { setSliderPos(1) }}>
-                    <img className="albums-sect__slider-container__btns-container__btn__arrow" src="../src/assets/img/arrow.svg"/>
+                    {/* <img className="albums-sect__slider-container__btns-container__btn__arrow" src="../src/assets/img/arrow.svg"/> */}
                 </button>
 
             </div>

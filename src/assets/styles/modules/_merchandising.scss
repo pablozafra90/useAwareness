@@ -62,3 +62,180 @@ $white: #FAFAFA;
         }
     }
 }
+
+/*  Responsive  */
+
+@media screen and (min-width: 1640px) {
+
+    .merch-sect{
+    
+        &__Title {
+
+            h2 {
+                font-size: 85px !important;
+            }
+        }
+    
+        &__card-layout {
+    
+            &__merchan-card {
+    
+                &:nth-child(1) {
+                }
+    
+                &:nth-child(2) {
+                }
+    
+                &:nth-child(3) {
+                }
+    
+                &__card-img {
+                }
+    
+                h4 {
+                }
+    
+                p {
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 720px) and (max-width: 1639px) {
+
+    .merch-sect{
+    
+        &__Title {
+            grid-column: 1 / span 5;
+
+            h2 {
+                font-size: 55px 
+            }
+        }
+    
+        &__card-layout {
+    
+            &__merchan-card {
+    
+                &:nth-child(1) {
+                    height: 360px;
+                }
+    
+                &:nth-child(2) {
+                    height: 340px;
+                    margin-top: 120px;
+                }
+    
+                &:nth-child(3) {
+                    height: 300px;
+                    margin-top: -100px;
+                }
+    
+                &__card-img {
+                }
+    
+                h4 {
+                }
+    
+                p {
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 719px) {
+
+    .merch-sect{
+    
+        &__Title {
+            grid-column: 1 / span 4;
+            margin-top: 0;
+            text-align: center;
+        }
+    
+        &__card-layout {
+            grid-column: 1 / span 4;
+            grid-template-columns: repeat(6, minmax(0px, 1fr));
+    
+            &__merchan-card {
+    
+                &:nth-child(1) {
+                    grid-column: 2 / span 4;
+                    height: 360px;
+                }
+    
+                &:nth-child(2) {
+                    grid-column: 1 / span 3;
+                    height: 340px;
+                    margin-top: 0;
+                }
+    
+                &:nth-child(3) {
+                    grid-column: 4 / span 3;
+                    height: 340px;
+                    margin-top: 0;
+                }
+    
+                &__card-img {
+                }
+    
+                h4 {
+                }
+    
+                p {
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .merch-sect{
+    
+        &__Title {
+            grid-column: 1 / span 4;
+            margin-top: 0;
+            text-align: center;
+        }
+    
+        &__card-layout {
+            grid-column: 1 / span 4;
+            grid-template-columns: repeat(6, minmax(0px, 1fr));
+    
+            &__merchan-card {
+    
+                &:nth-child(1) {
+                    grid-column: 2 / span 4;
+                    height: 310px;
+                }
+    
+                &:nth-child(2) {
+                    grid-column: 1 / span 3;
+                    height: 280px;
+                    margin-top: 0;
+                }
+    
+                &:nth-child(3) {
+                    grid-column: 4 / span 3;
+                    height: 280px;
+                    margin-top: 0;
+                }
+    
+                &__card-img {
+                }
+    
+                h4 {
+                }
+    
+                p {
+                }
+            }
+        }
+    }
+
+}

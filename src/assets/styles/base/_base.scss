@@ -19,6 +19,10 @@ $fonts: (
     "normal": Barlow,
 );
 
+$black: #1E1E1E;
+$white: #FAFAFA;
+$gray: #6A6A6A;
+
 /* Basics */
 
 body {
@@ -32,6 +36,7 @@ h1, h2, h3, h4 {
     color: map-get($colors, "white" );
     line-height: 1.1em;
     text-transform: uppercase;
+    word-wrap: break-word;
 }
 
 p {
@@ -63,6 +68,7 @@ section {
     &--01 {
         border-color: map-get($colors, "white" );
         color: map-get($colors, "white" );
+        background-color: map-get($colors, "black" );
 
         &:hover {
             background-color: map-get($colors, "white" );
@@ -106,7 +112,7 @@ button:focus {
 
 /* Responsive */
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1640px) {
     
     h1 {
         font-size: 150px;
@@ -123,21 +129,26 @@ button:focus {
     h4 {
         font-size: 32px;
     }
-
+    
+    .btn {
+        border-radius: 7px;
+        padding: 4px 18px;
+        font-size: 22px;
+    }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1439px) {
+@media screen and (min-width: 720px) and (max-width: 1639px) {
     
     h1 {
-        font-size: 135px;
-    }
-    
-    h2 {
         font-size: 96px;
     }
     
+    h2 {
+        font-size: 64px;
+    }
+    
     h3 {
-        font-size: 48px;
+        font-size: 36px;
     }
     
     h4 {
@@ -146,6 +157,17 @@ button:focus {
 
     p {
         font-size: 16px;
+    }
+    
+    .btn {
+        border-radius: 7px;
+        padding: 4px 18px;
+        font-size: 18px;
+    }
+
+    section {
+        padding-top: 8em;
+        padding-bottom: 8em;
     }
 
 }
@@ -153,15 +175,15 @@ button:focus {
 @media screen and (min-width: 376px) and (max-width: 719px) {
     
     h1 {
-        font-size: 110px;
+        font-size: 54px;
     }
     
     h2 {
-        font-size: 96px;
+        font-size: 55px;
     }
     
     h3 {
-        font-size: 48px;
+        font-size: 28px;
     }
     
     h4 {
@@ -171,21 +193,32 @@ button:focus {
     p {
         font-size: 16px;
     }
+    
+    .btn {
+        border-radius: 7px;
+        padding: 4px 18px;
+        font-size: 16px;
+    }
+
+    section {
+        padding-top: 6em;
+        padding-bottom: 6em;
+    }
 
 }
 
 @media screen and (max-width: 375px) {
     
     h1 {
-        font-size: 96px;
+        font-size: 44px;
     }
     
     h2 {
-        font-size: 48px;
+        font-size: 36px;
     }
     
     h3 {
-        font-size: 36px;
+        font-size: 22px;
     }
     
     h4 {
@@ -195,5 +228,36 @@ button:focus {
     p {
         font-size: 16px;
     }
+    
+    .btn {
+        border-radius: 7px;
+        padding: 4px 18px;
+        font-size: 14px;
+    }
+
+    section {
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
 
 }
+
+/* Empty breakpoints example
+
+@media screen and (min-width: 1640px) {
+
+}
+
+@media screen and (min-width: 720px) and (max-width: 1639px) {
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 719px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+*/

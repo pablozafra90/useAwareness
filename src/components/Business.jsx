@@ -1,5 +1,9 @@
+import { useAlert } from '../hooks/useAlert';
 
 export const Business = () => {
+
+  const { setAlertNav } = useAlert();
+
   return (
     <section className="business-sect">
 
@@ -25,9 +29,9 @@ export const Business = () => {
                 <input type="text" name="messaje" placeholder="Your message here" />
 
                 <p className="privacy">
-                    <input type="checkbox" name="privacy"/> <span className="txt"> I accept the <span className="link-simulation">Privacy Policy</span></span>
+                    <input type="checkbox" name="privacy"/> <span className="txt"> I accept the <span className="link-simulation" onClick={() => { setAlertNav() }}>Privacy Policy</span></span>
                 </p>
-                <input type="submit" value="Send"></input>
+                <input type="submit" value="Send" onClick={() => { setAlertNav() }}></input>
 
             </form>
             

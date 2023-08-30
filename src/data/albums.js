@@ -17,7 +17,7 @@ export const albums = [
         src: './src/assets/img/albums/the-sound-of-tomorrow.png',
         year: 2009,
         tracks: 18,
-        duration: 56,
+        duration: 59,
         price: 18,
     },
     {
@@ -27,7 +27,7 @@ export const albums = [
         src: './src/assets/img/albums/do-not-leave-me-here.png',
         year: 2013,
         tracks: 21,
-        duration: 56,
+        duration: 65,
         price: 17,
     },
     {
@@ -37,7 +37,7 @@ export const albums = [
         src: './src/assets/img/albums/bass-drops-and-stuff.png',
         year: 2019,
         tracks:     9,
-        duration: 56,
+        duration: 66,
         price: 17,
     },
     {
@@ -47,7 +47,7 @@ export const albums = [
         src: './src/assets/img/albums/the-best-day-of-your-life.png',
         year: 2023,
         tracks: 20,
-        duration: 56,
+        duration: 61,
         price: 19,
     },
 ];

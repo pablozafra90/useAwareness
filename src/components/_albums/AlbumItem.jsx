@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
+import { useAlert } from '../../hooks/useAlert';
 import ytMusic from '../../assets/img/platforms/Youtube-Music.svg';
 import dezeer from '../../assets/img/platforms/Dezeer.svg';
 import spotify from '../../assets/img/platforms/spotify.svg';
 
 export const AlbumItem = ({ title, src, year, tracks, duration, price }) => {
+
+    const { setAlertNav } = useAlert();
 
 
   return (
@@ -24,11 +27,11 @@ export const AlbumItem = ({ title, src, year, tracks, duration, price }) => {
                 { price }€
             </p>
 
-            <button className="albums-sect__slider-container__items-grid__item__info__btn btn btn--01">Add to chart</button>
+            <button className="albums-sect__slider-container__items-grid__item__info__btn btn btn--01" onClick={() => { setAlertNav() }}>Add to chart</button>
 
             <p>Listen on:</p>
 
-            <div className="albums-sect__slider-container__items-grid__item__info__platforms">
+            <div className="albums-sect__slider-container__items-grid__item__info__platforms" onClick={() => { setAlertNav() }}>
                 <img className="albums-sect__slider-container__items-grid__item__info__platforms__icon" src={ytMusic}></img>
                 <img className="albums-sect__slider-container__items-grid__item__info__platforms__icon" src={dezeer}></img>
                 <img className="albums-sect__slider-container__items-grid__item__info__platforms__icon" src={spotify}></img>
