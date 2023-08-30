@@ -1,0 +1,64 @@
+$black: #1E1E1E;
+$white: #FAFAFA;
+
+.merch-sect{
+
+    &__Title {
+        grid-column: 2 / span 4;
+        word-wrap: break-word;
+        margin-top: 250px;
+    }
+
+    &__card-layout {
+        position: relative;
+        grid-column: 6 / span 6;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0px, 1fr));
+        gap: 20px;
+
+        &__merchan-card {
+            position: relative;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto min-content min-content min-content;
+            background-color: $white;
+            color: $black;
+            padding: 13px;
+            border-radius: 8px;
+            gap: 11px;
+
+            &:nth-child(1) {
+                height: 450px;
+                grid-column: 1 / span 3;
+            }
+
+            &:nth-child(2) {
+                height: 500px;
+                grid-column: 4 / span 3;
+                margin-top:150px;
+            }
+
+            &:nth-child(3) {
+                height: 350px;
+                grid-column: 2 / span 2;
+                margin-top:-200px;
+            }
+
+            &__card-img {
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            h4 {
+                color: $black;
+                margin: 0;
+            }
+
+            p {
+                color: $black;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+header {
+    position: relative;
+    overflow: hidden;
+
+    .bg-video-container {
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    
+        &__bg-video-wrapper {
+    
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -100;
+            clip: rect(0, auto, auto, 0);
+        
+            &__bg-video {
+                position: fixed;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        
+        }
+    
+    }
+    
+    .header-logo{
+        position: absolute;
+        top:30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .header-container {
+    
+        position: relative;
+        padding-bottom: 47em;
+    
+        &__h1-container {
+    
+            grid-column: 2 / span 7;
+            height: 100vh;
+            position: relative;
+    
+            &__h1-content {
+    
+                position: absolute;
+                width: 100%;
+                bottom: 28em;
+        
+                h1{
+                    position: absolute;
+                    width: 100%;
+                }
+        
+            }
+    
+        }
+    }
+}
+    
+@media screen and (max-width: 479px) {
+    .header-container {
+    
+        &__h1-container {
+            grid-column: 1 / span 4;
+        }
+    }
+}

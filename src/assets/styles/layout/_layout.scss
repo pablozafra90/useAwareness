@@ -1,0 +1,28 @@
+/* Column grid */
+
+.grid-layout {
+    display: grid;
+    height: 100%;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 480px) {
+    .grid-layout {
+        grid-template-columns: repeat(12, minmax(0px, 1fr));
+        gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+};
+
+@media screen and (max-width: 479px) {
+    .grid-layout {
+        grid-template-columns: repeat(4, minmax(0px, 1fr));
+        gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+};

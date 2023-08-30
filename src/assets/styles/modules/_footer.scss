@@ -1,0 +1,35 @@
+$black: #1E1E1E;
+$white: #FAFAFA;
+$gray: #6A6A6A;
+
+.footer-sect {
+    background-color: $white;
+    text-align: center;
+    align-items: center;
+    padding: 50px 0px 40px 0px;
+
+    &__logo {
+        position: relative;
+        max-width: 90%;
+        grid-column: 4 / span 6;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__links {
+        position: relative;
+        padding: 0;
+        grid-column: 1 / span 12;
+        list-style-type: none;
+        text-align: center;
+        width: fit-content;
+        margin-top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &__link {
+            float: left;
+            margin: 0px 5px 0px 5px;
+        }
+    }
+}
