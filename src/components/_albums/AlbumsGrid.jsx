@@ -1,6 +1,7 @@
 import { albums } from '../../data/albums';
 import { AlbumItem } from './AlbumItem';
 
+
 export const AlbumsGrid = ( { leftPos } ) => {
 
   //console.log("AlbumGrid pintado con pos: " + leftPos());

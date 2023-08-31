@@ -1,9 +1,15 @@
 import { AlbumsGrid } from './_albums/AlbumsGrid';
 import { useSliderPos } from '../hooks/useSliderPos';
+import { useEffect } from 'react';
 
 export const Albums = () => {
 
     const { leftPropGrid, setSliderPos } = useSliderPos();
+
+    
+    useEffect( () => {
+        setSliderPos(0)
+    }, []);
 
   return (
     <section className="albums-sect">
@@ -36,5 +42,4 @@ export const Albums = () => {
 
     </section>
   )
-
 }

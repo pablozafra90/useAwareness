@@ -1,18 +1,15 @@
-$black: #1E1E1E;
-$white: #FAFAFA;
-$gray: #6A6A6A;
-$transparent: rgba(0,0,0,0,);
+@import '../base/variables';
 
 .nav-menu {
     position: fixed;
     z-index: 10;
-    background-color: $black;
+    background-color: map-get($colors, "black" );
     width: 100vw;
     height: 100vh;
     top: 0;
     right: 0;
     bottom: 0;
-    color: $white;
+    color: map-get($colors, "white" );
     transition: all 0.3s ease-out;
 
     &__hamburguer-btn {

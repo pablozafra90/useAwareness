@@ -15,7 +15,7 @@ export const AlbumItem = ({ title, src, year, tracks, duration, price }) => {
 
         <img className="albums-sect__slider-container__items-grid__item__cover" src={ src } />
 
-        <div className="albums-sect__slider-container__items-grid__item__info">
+        <div className="albums-sect__slider-container__items-grid__item__info item-info">
 
             <h3>{ title }</h3>
             <p>

@@ -1,3 +1,5 @@
+@import '../base/variables';
+
 .albums-sect {
     overflow: hidden;
 
@@ -77,6 +79,8 @@
                 }
 
                 &__info {
+                    opacity: 0;
+                    transition: opacity 0.3s;
 
                     &__btn {
                         margin-bottom: 20px;
@@ -90,6 +94,13 @@
                             cursor: pointer;
                         }
                     }
+                }
+            }
+
+            .item-selected {
+
+                .item-info{
+                    opacity: 1 !important;
                 }
             }
         }

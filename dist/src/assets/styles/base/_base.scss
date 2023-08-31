@@ -1,34 +1,14 @@
-@import url('./_reset.css');
+@import './_reset.css';
+@import './variables';
+@import './fonts.scss';
 
-
-/* Fonts */
-
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Koulen&display=swap');
-
-
-/* variables */
-
-$colors: (
-    "black": #1E1E1E,
-    "white": #FAFAFA,
-);
-
-$fonts: (
-    "titles": Koulen,
-    "normal": Barlow,
-);
-
-$black: #1E1E1E;
-$white: #FAFAFA;
-$gray: #6A6A6A;
 
 /* Basics */
 
 * {
 
     &::selection {
-        background-color: rgb(255, 32, 170);
+        background-color: map-get($colors, "pink" );
         color: white;
     }
 }
@@ -53,7 +33,7 @@ p {
     line-height: 1.1em;
 
     &::selection {
-        background-color: rgb(255, 219, 13);
+        background-color: map-get($colors, "yellow" );
         color: black;
     }
 }

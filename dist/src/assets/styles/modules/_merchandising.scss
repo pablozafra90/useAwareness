@@ -1,5 +1,5 @@
-$black: #1E1E1E;
-$white: #FAFAFA;
+@import '../base/_variables';
+
 
 .merch-sect{
 
@@ -21,8 +21,8 @@ $white: #FAFAFA;
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: auto min-content min-content min-content;
-            background-color: $white;
-            color: $black;
+            background-color: map-get($colors, "white" );
+            color: map-get($colors, "black" );
             padding: 13px;
             border-radius: 8px;
             gap: 10px;
@@ -51,12 +51,12 @@ $white: #FAFAFA;
             }
 
             h4 {
-                color: $black;
+                color: map-get($colors, "black" );
                 margin: 0;
             }
 
             p {
-                color: $black;
+                color: map-get($colors, "black" );
                 margin: 0 0 0.3em 0;
             }
         }

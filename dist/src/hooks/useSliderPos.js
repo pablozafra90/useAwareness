@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { albums } from '../data/albums';
 
 export const useSliderPos = () => {
@@ -20,8 +20,29 @@ export const useSliderPos = () => {
         if ( position + pos >= 0 && position + pos < albumsLenth ) {
             setPosition(position + pos);
         }
-  
-    } 
+        
+    }
+    
+    
+    const setVisible = () => {
+        const items = document.getElementsByClassName('albums-sect__slider-container__items-grid__item');
+        const itemsArray = Array.from(items);
+
+        Array.from(
+            document.getElementsByClassName('albums-sect__slider-container__items-grid__item')
+            ).map( (item, index) => {
+                if (index === position) {
+                    item.classList.add('item-selected'); 
+                } else {
+                    item.classList.remove('item-selected'); 
+                }
+
+            });
+    }
+
+    useEffect( () => {
+        setVisible()
+    }, [position]);
     
     //console.log( position );
 
