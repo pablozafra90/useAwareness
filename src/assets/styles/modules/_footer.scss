@@ -1,9 +1,7 @@
-$black: #1E1E1E;
-$white: #FAFAFA;
-$gray: #6A6A6A;
+@import '../base/_variables';
 
 .footer-sect {
-    background-color: $white;
+    background-color: map-get($colors, "white" );
     text-align: center;
     align-items: center;
     padding: 50px 0px 40px 0px;
@@ -31,6 +29,10 @@ $gray: #6A6A6A;
         &__link {
             float: left;
             margin: 0px 5px 0px 5px;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

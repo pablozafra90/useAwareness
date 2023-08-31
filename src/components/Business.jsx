@@ -16,17 +16,17 @@ export const Business = () => {
 
             <form>
 
-                <label for="name">Full name</label>
-                <input type="text" name="name" placeholder="Your full name" />
+                <label htmlFor="name">Full name</label>
+                <input type="text" name="name" placeholder="Your full name" autoComplete="name" id="name"/>
 
-                <label for="email">Email address</label>
-                <input type="text" name="email" placeholder="Your email address" />
+                <label htmlFor="email">Email address</label>
+                <input type="text" name="email" placeholder="Your email address" autoComplete="email" id="email"/>
 
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" placeholder="Message subject" />
+                <label htmlFor="subject">Subject</label>
+                <input type="text" name="subject" placeholder="Message subject" autoComplete="subject" id="subject"/>
 
-                <label for="messaje">Message</label>
-                <input type="text" name="messaje" placeholder="Your message here" />
+                <label htmlFor="message">Message</label>
+                <input type="text" name="message" placeholder="Your message here" autoComplete="message" id="message"/>
 
                 <p className="privacy">
                     <input type="checkbox" name="privacy"/> <span className="txt"> I accept the <span className="link-simulation" onClick={() => { setAlertNav() }}>Privacy Policy</span></span>

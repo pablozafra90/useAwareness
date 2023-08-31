@@ -1,6 +1,10 @@
 import { MerchanCard } from "./_merchandising/MerchanCard"
+import { useAlert } from '../hooks/useAlert';
 
 export const Merchandising = () => {
+
+  const { setAlertNav } = useAlert();
+
   return (
     <section className="merch-sect">
 
@@ -16,6 +20,7 @@ export const Merchandising = () => {
                 <MerchanCard id={1} />
                 <MerchanCard id={2} />
                 <MerchanCard id={3} />
+                <button className="merch-sect__card-layout__btn btn btn--04 btn--link-out" onClick={() => { setAlertNav() }}>View all</button>
 
             </div>
 

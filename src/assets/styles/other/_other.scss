@@ -1,6 +1,4 @@
-$black: #1E1E1E;
-$white: #FAFAFA;
-$gray: #6A6A6A;
+@import '../base/variables';
 
 .trasparence {
     position: absolute;
@@ -27,22 +25,22 @@ form {
             vertical-align: middle;
 
             &:checked {
-                background-color: $white;
+                background-color: map-get($colors, "white" );
             }
         }
 
         &[type=text] {
             display: block;
             width: 100%;
-            background-color: $black;
-            color: $white;
+            background-color: map-get($colors, "black" );
+            color: map-get($colors, "white" );
             margin-bottom: 20px;
-            border: solid 1px $white;
+            border: solid 1px map-get($colors, "white" );
             padding: 30px 10px 10px 10px;
             border-radius: 8px;
     
             &::placeholder {
-                color: $white;
+                color: map-get($colors, "white" );
             }
     
             &:focus {
@@ -55,24 +53,25 @@ form {
 
         &[type=submit] {
             border: none;
-            color: $black;
+            color: map-get($colors, "black" );
             display: block;
             width: 100%;
             padding: 10px;
             border-radius: 8px;
             font-size: 22px;
+            background-color: map-get($colors, "white" );
     
             &:hover {
-                background-color: $gray;
-                color: $white;
-                border: solid 1px $white;
+                background-color: map-get($colors, "gray" );
+                color: map-get($colors, "white" );
+                border: solid 1px map-get($colors, "white" );
             }
         }
     }
 
     label {
         position: absolute;
-        color: $gray;
+        color: map-get($colors, "gray" );
         font-size: 13px;
         margin-left: 10px;
         margin-top: 8px;

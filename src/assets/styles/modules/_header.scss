@@ -1,6 +1,4 @@
-$black: #1E1E1E;
-$white: #FAFAFA;
-$gray: #6A6A6A;
+@import '../base/_variables';
 
 header {
     position: relative;
@@ -54,7 +52,7 @@ header {
 
                 &__highlighted {
                     position: relative;
-                    color: $black;
+                    color: map-get($colors, "black" );
 
                     &__img {
                         position: absolute;

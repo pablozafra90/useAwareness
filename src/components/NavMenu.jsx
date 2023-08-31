@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useAlert } from '../hooks/useAlert';
 
 export const NavMenu = () => {
+
+    const { setAlertNav } = useAlert();
 
     const [stateClassName, setStateClassName] = useState('nav-menu__closed');
 
@@ -21,7 +24,7 @@ export const NavMenu = () => {
 
         <img className="nav-menu__logo"  src="../src/assets/img/logo.svg"/>
 
-        <ul className="nav-menu__links-container">
+        <ul className="nav-menu__links-container" onClick={() => { setAlertNav() }}>
 
             <li className="nav-menu__links-container__link"><h3>Home</h3></li>
             <li className="nav-menu__links-container__link"><h3>Videoclips</h3></li>
